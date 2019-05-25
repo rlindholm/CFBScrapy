@@ -7,8 +7,9 @@ Can be installed using PyPi using pip install CFBScrapy
 
 ## Usage
 
+```python
 import CFBScrapy
-
+```
 
 
 ## Contributing

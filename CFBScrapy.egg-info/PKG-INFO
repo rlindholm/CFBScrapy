@@ -15,8 +15,9 @@ Description: # CFBScrapy
         
         ## Usage
         
+        ```python
         import CFBScrapy
-        
+        ```
         
         
         ## Contributing
