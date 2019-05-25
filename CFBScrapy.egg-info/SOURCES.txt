@@ -1,7 +1,7 @@
 README.md
 setup.py
 CFBScrapy/__init__.py
-CFBScrapy/index.py
+CFBScrapy/cfbtools.py
 CFBScrapy.egg-info/PKG-INFO
 CFBScrapy.egg-info/SOURCES.txt
 CFBScrapy.egg-info/dependency_links.txt

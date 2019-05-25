@@ -8,7 +8,8 @@ Can be installed using PyPi using pip install CFBScrapy
 ## Usage
 
 ```python
-import CFBScrapy
+from CFBScrapy import cfbtools
+t = cfbtools.get_game_info(year=2018)
 ```
 
 
