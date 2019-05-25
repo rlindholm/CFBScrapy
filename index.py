@@ -144,7 +144,10 @@ def get_game_team_stats(year, week=None, seasonType='regular', team=None, confer
     payload['year'] = year
     payload['seasonType'] = seasonType
 
+<<<<<<< HEAD
     #needs one of these to not return a bad request
+=======
+>>>>>>> 7481a0dbb5219b8980d9d0608c67a2094664d7b1
     if week is not None or team is not None or conference is not None or gameId is not None:
         if week is not None:
             payload['week'] = week
@@ -157,7 +160,10 @@ def get_game_team_stats(year, week=None, seasonType='regular', team=None, confer
     else:
         raise ValueError('Must have 1 of team, week, conference or a valid gameID')
 
+<<<<<<< HEAD
     #deeply nested json again
+=======
+>>>>>>> 7481a0dbb5219b8980d9d0608c67a2094664d7b1
     r = requests.get(base_url, params=payload)
     if r.status_code == 200:
         try:
