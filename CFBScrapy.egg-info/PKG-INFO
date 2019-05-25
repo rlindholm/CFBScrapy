@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: CFBScrapy
+Version: 0.1.5
+Summary: Python wrapper for the collegefootballapi located here: https://api.collegefootballdata.com/api/docs/?url=/api-docs.json#/
+Home-page: https://github.com/rlindholm/CFBScrapy
+Author: Ryan Lindholm
+Author-email: ryan.lindholm@outlook.com
+License: UNKNOWN
+Description: # CFBScrapy
+        Python wrapper for the collegefootballapi located here: https://api.collegefootballdata.com/api/docs/?url=/api-docs.json#/
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

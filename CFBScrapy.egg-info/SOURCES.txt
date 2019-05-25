@@ -1,0 +1,7 @@
+README.md
+setup.py
+CFBScrapy.egg-info/PKG-INFO
+CFBScrapy.egg-info/SOURCES.txt
+CFBScrapy.egg-info/dependency_links.txt
+CFBScrapy.egg-info/requires.txt
+CFBScrapy.egg-info/top_level.txt
