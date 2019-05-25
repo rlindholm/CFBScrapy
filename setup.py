@@ -13,7 +13,7 @@ with open('requirements.txt') as f:
 
 setup(
     name="CFBScrapy",
-    version="0.1.05",
+    version="0.1.07",
     description="Python wrapper for the collegefootballapi located here: https://api.collegefootballdata.com/api/docs/?url=/api-docs.json#/",
     long_description=README,
     long_description_content_type="text/markdown",

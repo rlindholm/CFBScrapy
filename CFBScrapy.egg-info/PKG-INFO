@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: CFBScrapy
-Version: 0.1.5
+Version: 0.1.7
 Summary: Python wrapper for the collegefootballapi located here: https://api.collegefootballdata.com/api/docs/?url=/api-docs.json#/
 Home-page: https://github.com/rlindholm/CFBScrapy
 Author: Ryan Lindholm
@@ -16,7 +16,8 @@ Description: # CFBScrapy
         ## Usage
         
         ```python
-        import CFBScrapy
+        import CFBScrapy as cfb
+        t = cfb.get_game_info(year=2018)
         ```
         
         
@@ -30,7 +31,9 @@ Description: # CFBScrapy
         2. EPA and Win probability a la nflscrapR
         3. Normalization of the tables returned
         
-        Created by Ryan Lindholm
+        Author: Ryan Lindholm
+        
+        Contributors: Meyappan Subbaiah 
         
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3.6

@@ -8,8 +8,8 @@ Can be installed using PyPi using pip install CFBScrapy
 ## Usage
 
 ```python
-from CFBScrapy import cfbtools
-t = cfbtools.get_game_info(year=2018)
+import CFBScrapy as cfb
+t = cfb.get_game_info(year=2018)
 ```
 
 
@@ -23,4 +23,6 @@ Feel free to open any issues or pull requests. Additionally, you can reach out t
 2. EPA and Win probability a la nflscrapR
 3. Normalization of the tables returned
 
-Created by Ryan Lindholm
+Author: Ryan Lindholm
+
+Contributors: Meyappan Subbaiah 
