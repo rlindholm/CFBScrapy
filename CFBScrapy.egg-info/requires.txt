@@ -1,3 +1,2 @@
-requests
-pandas
-pandas.io
+pandas==0.23.4
+requests==2.19.1

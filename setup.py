@@ -7,6 +7,10 @@ HERE = pathlib.Path(__file__).parent
 
 README = (HERE/ "README.md").read_text()
 
+with open('requirements.txt') as f:
+    REQUIRED = f.read().splitlines()
+
+
 setup(
     name="CFBScrapy",
     version="0.1.05",
@@ -17,6 +21,11 @@ setup(
     author="Ryan Lindholm",
     author_email="ryan.lindholm@outlook.com",
     packages=find_packages(),
-    install_requires=["requests", "pandas", "pandas.io"],
+    install_requires=[REQUIRED],
+    classifiers=[
+        'Programming Language :: Python :: 3.6',
+        "Operating System :: OS Independent"
+    ],
+    #install_requires=["requests", "pandas", "pandas.io"],
     
 )
