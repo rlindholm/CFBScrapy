@@ -26,17 +26,11 @@ def get_game_info(year, seasonType='regular', week=None, team=None, home=None,
     payload = {}
     payload['year'] = year
     payload['seasonType'] = seasonType
-
-    if week is not None:
-        payload['week'] = week
-    if team is not None:
-        payload['team'] = team
-    if home is not None:
-        payload['home'] = home
-    if away is not None:
-        payload['away'] = away
-    if conference is not None:
-        payload['conference'] = conference
+    payload['week'] = week
+    payload['team'] = team
+    payload['home'] = home
+    payload['away'] = away
+    payload['conference'] = conference
 
     r = requests.get(base_url, params=payload)
     if r.status_code == 200:
@@ -144,10 +138,7 @@ def get_game_team_stats(year, week=None, seasonType='regular', team=None, confer
     payload['year'] = year
     payload['seasonType'] = seasonType
 
-<<<<<<< HEAD
     #needs one of these to not return a bad request
-=======
->>>>>>> 7481a0dbb5219b8980d9d0608c67a2094664d7b1
     if week is not None or team is not None or conference is not None or gameId is not None:
         if week is not None:
             payload['week'] = week
@@ -160,10 +151,7 @@ def get_game_team_stats(year, week=None, seasonType='regular', team=None, confer
     else:
         raise ValueError('Must have 1 of team, week, conference or a valid gameID')
 
-<<<<<<< HEAD
     #deeply nested json again
-=======
->>>>>>> 7481a0dbb5219b8980d9d0608c67a2094664d7b1
     r = requests.get(base_url, params=payload)
     if r.status_code == 200:
         try:
