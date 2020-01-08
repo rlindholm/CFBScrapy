@@ -421,3 +421,41 @@ def get_historical_rankings(year, week=None, seasonType=None):
     else:
         raise Exception('Request failed with status code: '+str(r.status_code))
 
+
+def get_betting_lines(year, week=None, seasonType=None, team=None, home=None, away=None, conference=None):
+    '''
+    Takes in year, week, season type, team, home, away, and conference and returns
+    a DataFrame containing betting lines from different sources for each game.
+
+    Year: int, year
+    Week: int, week
+    seasonType: string, values: regular or postseason
+    Team: string, team
+    Home: string, home team filter
+    Away: string, away team filter
+    Conference: string, conference filter
+    '''
+
+    base_url = 'https://api.collegefootballdata.com/lines?'
+    payload = {}
+
+    payload['year'] = year
+    payload['week'] = week
+    payload['seasonType'] = seasonType
+    payload['team'] = team
+    payload['home'] = home
+    payload['away'] = away
+    payload['conference'] = conference
+
+    r = requests.get(base_url, params=payload)
+    if r.status_code == 200:
+        try:
+            bets_df = json_normalize(r.json())[['id', 'homeTeam', 'awayTeam', 'awayScore']]
+            lines_df = json_normalize(r.json(), errors='ignore', record_path='lines', meta=['id'])
+            return bets_df.merge(lines_df)
+
+        except KeyError:
+            raise KeyError('Invalid parameters, no results returned')
+
+    else:
+        raise Exception('Request failed with status code: ' + str(r.status_code))
